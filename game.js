@@ -4,6 +4,7 @@ const buttonColours = ["red", "blue", "green", "yellow"];
 var userClickedPattern = [];
 var level = 0;
 
+// functions for execution
 function NextSequence(){
 
     userClickedPattern=[];
@@ -65,7 +66,10 @@ function wrong (){
 function startOver(){
     gamePattern = [];
     level = 0;
+    $(".start-div").removeClass("hide");
 }
+
+// start
 
 $("body").keydown(function(){
     if(gamePattern[0]== null){
@@ -73,6 +77,18 @@ $("body").keydown(function(){
     }
 })
 
+$(".start-div").click(function(){
+
+    setTimeout(() => {
+        if(gamePattern[0]== null){
+            NextSequence();
+            $(".start-div").addClass("hide");
+            }
+    }, 500);
+    
+    
+})
+   
 $(".btn").click(function() {
     var userChosenColour = this.id;
 

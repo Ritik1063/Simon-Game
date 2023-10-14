@@ -10,6 +10,13 @@ body {
   color: #FEF2BF;
 }
 
+#level-instructions{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+
 .container {
   display: block;
   width: 50%;
@@ -52,3 +59,15 @@ body {
   background-color: grey;
 }
 
+.hide{
+  visibility: hidden;
+  display: none;
+}
+
+.start{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+}
